@@ -1,0 +1,12 @@
+<h1 style="color: royalblue">welcome to Categro Companent </h1>
+<form #myForm="ngForm"(ngSubmit)="onSubmit()">
+    <label>
+        id :
+    </label>
+    <input type="text" name="id"[(ngModel)]="cat.id">
+    <label>
+            Name :
+        </label>
+        <input type="text" name="name"[(ngModel)]="cat.name">
+        <input type="submit" value="send">
+</form>

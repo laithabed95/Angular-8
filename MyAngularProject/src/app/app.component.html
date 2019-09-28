@@ -1,0 +1,38 @@
+<h1> This iS the contant of the app com</h1>
+<app-login></app-login>
+<h1>Hello  {{name |uppercase}} , age {{age}}</h1>
+<h1>Date :{{currentDate}}</h1>
+<h1>currency {{ 455.54 | currency:"EUR"}}</h1>
+
+<select (change)="onChange()">
+    <option *ngFor="let color of colors">
+        {{color}}
+    </option>
+</select>
+
+<input type="text" [(ngModel)]="name">
+
+<input type="button" value="click here"(click)="myfunction()"><br>
+<input type="button" [value]="LogState"(click)="toggle()"><br>
+<div *ngIf="isAuth; then welcome else error">
+
+</div>
+<ng-template #welcome>
+    <p style="color: green">
+        welcome to out app
+    </p>
+</ng-template>
+<ng-template #error >
+    <p style="color: red">
+        please login to our up
+    </p>
+</ng-template>
+<ul>
+    <li><a routerLink="Client">Client </a></li>
+    <li><a routerLink="Article">Article </a></li>
+    <li><a routerLink="Category">Category </a></li>
+    <li><a routerLink="login">Login </a></li>
+
+
+</ul>
+<router-outlet></router-outlet>
